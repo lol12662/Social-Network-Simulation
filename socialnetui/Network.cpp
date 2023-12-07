@@ -536,16 +536,12 @@ void Network::add_post(std::size_t ownerId, std::string message, std::size_t lik
 
         Post* newPost = new Post(ownerId, message, likes);
         get_user(ownerId)->add_post(newPost);
-        if(get_user(author)->get_fullName()=="Leo Griffin")
-            std::cout<<get_user(ownerId)->display_posts(1,false)<<" check"<<std::endl;
     }
     else {
            // std::cout<<message<<" check"<<std::endl;
         //IncomingPost a(ownerId, message, likes, isPublic, get_user(author)->get_fullName());
         Post* newPost = new IncomingPost(ownerId, message, likes, isPublic, get_user(author)->get_fullName());
         get_user(ownerId)->add_post(newPost);
-        if(get_user(author)->get_fullName()=="Leo Griffin")
-        std::cout<<get_user(ownerId)->display_posts(1,true)<<" check"<<std::endl;
     }
 }
 /*

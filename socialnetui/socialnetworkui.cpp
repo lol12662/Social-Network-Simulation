@@ -346,13 +346,13 @@ void socialnetworkui::goback(){
     }
     else{
         std::string b = actions.top();
-        std::cout << b << std::endl;
+       // std::cout << b << std::endl;
 
             if(b=="VisitAdd"){
             std::string a = pastUsers.top();
             alpha.remove_connection( lgd->get_fullName(), a);
             lgd->delete_friend(alpha.get_id(a));
-            std::cout << "deleted" << std::endl;
+           // std::cout << "deleted" << std::endl;
 
             }
             pastUsers.pop();
